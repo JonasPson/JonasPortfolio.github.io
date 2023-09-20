@@ -9,5 +9,17 @@ namespace PortfolioMvc.Controllers
         {
             return View();
         }
+
+        [HttpGet("contact")]
+        public IActionResult Contact() 
+        {
+            return View();
+        }
+
+        [HttpGet("about")]
+        public IActionResult About()
+        {
+            return View();
+        }
     }
 }

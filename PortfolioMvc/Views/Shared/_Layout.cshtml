@@ -13,22 +13,25 @@
 
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="logo">Jonas.</a>
+    <header class="header" id="main-header">
+
+        @*<a href="Home" class="logo">Jonas.</a>*@
+        <a asp-controller="Projects" asp-action="Index" class="logo">Jonas.</a>
 
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <nav class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="#">About</a>
+                <a asp-controller="Projects" asp-action="Index">Home</a>
+                <a asp-controller="Projects" asp-action="About">About</a>
                 <a href="#">Education</a>
                 <a href="#">Skills</a>
                 <a href="#">Projects</a>
-                <a href="#">Contact</a>
+                <a asp-controller="Projects" asp-action="Contact">Contact</a>
         </nav>
     </header>
     <div>
         @RenderBody()
     </div>
+    <script src="~/js/JavaScript.js"></script>
 </body>
 </html>
