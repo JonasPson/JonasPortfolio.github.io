@@ -23,9 +23,9 @@
         <nav class="navbar">
                 <a asp-controller="Projects" asp-action="Index">Home</a>
                 <a asp-controller="Projects" asp-action="About">About</a>
-                <a href="#">Education</a>
-                <a href="#">Skills</a>
-                <a href="#">Projects</a>
+                <a asp-controller="Projects" asp-action="Education">Education</a>
+                @*<a href="#">Skills</a>*@
+                <a asp-controller="Projects" asp-action="Projects">Projects</a>
                 <a asp-controller="Projects" asp-action="Contact">Contact</a>
         </nav>
     </header>
