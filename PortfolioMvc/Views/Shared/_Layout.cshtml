@@ -13,25 +13,35 @@
 
 </head>
 <body>
-    <header class="header" id="main-header">
 
-        @*<a href="Home" class="logo">Jonas.</a>*@
+    <header class="header" id="main-header">
+       
         <a asp-controller="Projects" asp-action="Index" class="logo">Jonas.</a>
 
         <div class="bx bx-menu" id="menu-icon"></div>
 
         <nav class="navbar">
-                <a asp-controller="Projects" asp-action="Index">Home</a>
-                <a asp-controller="Projects" asp-action="About">About</a>
-                <a asp-controller="Projects" asp-action="Education">Education</a>
-                @*<a href="#">Skills</a>*@
-                <a asp-controller="Projects" asp-action="Projects">Projects</a>
-                <a asp-controller="Projects" asp-action="Contact">Contact</a>
+            <a asp-controller="Projects" asp-action="Index" class="active">Home</a>
+            <a asp-controller="Projects" asp-action="About">About</a>
+            <a asp-controller="Projects" asp-action="Education">Education</a>
+            <a asp-controller="Projects" asp-action="Projects">Projects</a>
+            <a asp-controller="Projects" asp-action="Contact">Contact</a>
+
+            <span class="active-nav"></span>
+
         </nav>
     </header>
+
     <div>
         @RenderBody()
     </div>
+    @*<footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2023 by Jonas Pettersson | All Rights Reserved</p>
+        </div>
+
+    </footer>*@
     <script src="~/js/JavaScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

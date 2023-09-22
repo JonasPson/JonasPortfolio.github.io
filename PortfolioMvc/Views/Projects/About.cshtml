@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model AboutVM
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,21 +11,18 @@
         <h2 class="heading">About <span>Me</span></h2>
 
         <div class="about-img">
-            <img src="" alt=""/>
+            <img src="~/Images/aboutpic.jpg" alt=""/>
             <span class="circle-spin"></span>
         </div>
 
         <div class="about-content">
             <h3>Full Stack Developer</h3>
-            <p>Lorem ipsum dolor sit amaet consectur adisplici elit. Volupatibus at cupidate laborum quae
-                facare debiti ipsam quasi, natus quisdam officilis fugit
-                repallet veniam totam asperius dolorem nobis.Lorem ipsum dolor sit amaet consectur adisplici elit. Volupatibus at cupidate laborum quae
-                facare debiti ipsam quasi, natus quisdam officilis fugit
-                repallet veniam totam asperius dolorem nobis.
+            <p class="description">
+                @Model.Description
             </p>
 
             <div class="btn-box btns">
-                <a href="#" class="btn">Read More</a>
+                <a href="#" class="btn read-more">Read More</a>
 
             </div>
 

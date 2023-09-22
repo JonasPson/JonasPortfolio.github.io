@@ -2,5 +2,6 @@
 {
     public class AboutVM
     {
+        public string Description { get; set; }
     }
 }
