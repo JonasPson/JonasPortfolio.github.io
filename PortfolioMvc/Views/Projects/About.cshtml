@@ -11,25 +11,57 @@
         <h2 class="heading">About <span>Me</span></h2>
 
         <div class="about-img">
-            <img src="~/Images/aboutpic.jpg" alt=""/>
+            <img src="~/Images/aboutpic.jpg" alt="" />
             <span class="circle-spin"></span>
         </div>
 
-        <div class="about-content">
+        <div class="about-content align-center">
             <h3>Full Stack Developer</h3>
-            <p class="description">
-                @Model.Description
-            </p>
-
-            <div class="btn-box btns">
-                <a href="#" class="btn read-more">Read More</a>
-
+            <div id="partialContent">
+                @{
+                    var words = Model.FirstText;
+                    var secondText = Model.SecondText;
+                    var thirdText = Model.ThirdText;
+                    var fourthText = Model.FourthText;
+                    var fifthText = Model.FifthText;
+                }
+                <p>
+                    @Model.FirstText
+                </p>
+                <p id="remainingWords" style="display:none;">
+                    @secondText
+                    <br>
+                    <br>
+                    @thirdText
+                    <br>
+                    <br>
+                    @fourthText
+                    <br>
+                    <br>
+                    @fifthText
+                </p>
+                <div id="readMoreButton" class="btn-box btns">
+                    <button id="readMore" class="btn">Read More</button>
+                </div>
             </div>
-
 
         </div>
 
+        <script>
+            document.getElementById("readMore").addEventListener("click", function () {
+                var contentDiv = document.querySelector(".about-content");
+                contentDiv.classList.remove("align-center");
+                contentDiv.classList.add("align-left");
+                document.getElementById("remainingWords").style.display = "block";
+                document.getElementById("readMoreButton").style.display = "none";
+            });
 
+
+
+        </script>
     </section>
+
+
+
 </body>
 </html>
