@@ -38,5 +38,10 @@ namespace PortfolioMvc.Controllers
             return View();
         }
 
+        [HttpGet("projects")]
+        public IActionResult Projects()
+        {
+            return View();
+        }
     }
 }
