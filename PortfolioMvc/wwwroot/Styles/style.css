@@ -78,8 +78,8 @@ section{
     align-items: center;
     padding: 0 9%;
     background: url('../Images/portfolioweb.jpg');
+    background-position: top;
     background-size: cover;
-    background-position: center;
     /*background-position-y: -40px;*/
 }
 .home-content{
@@ -395,12 +395,15 @@ span{
 }
 
 .portfolio-box img{
+    filter:grayscale(50%);
     width:100%;
     transition: .5s ease;
 }
 
 .portfolio-box:hover img{
     transform: scale(1.1);
+    filter:blur(100%);
+    filter:grayscale(100%);    
 }
 .portfolio-box .portfolio-layer {
     position: absolute;
@@ -429,6 +432,7 @@ span{
 .portfolio-layer p{
     font-size: 1.5rem;
     margin: .3rem 0 1rem;
+    filter:drop-shadow(.7);
 }
 
 .portfolio-layer a{

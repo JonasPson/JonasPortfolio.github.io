@@ -18,6 +18,22 @@ namespace PortfolioMvc.Controllers
             return View();
         }
 
+        [HttpPost("contact")]
+        public IActionResult Contact(ContactVM contactVM)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            return RedirectToAction(nameof(Message));
+        }
+
+        [HttpGet("message")]
+        public IActionResult Message()
+        {
+            return View();
+        }
+
         [HttpGet("about")]
         public IActionResult About()
         {
